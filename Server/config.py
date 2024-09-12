@@ -7,6 +7,7 @@ class Config:
     SPOTIFY_CLIENT_SECRET = config('SPOTIFY_CLIENT_SECRET')
 
 class DevConfig(Config):
+    REDIRECT_URI = "http://localhost:8888/callback"
     DEBUG = True
 
 class ProdConfig(Config):
