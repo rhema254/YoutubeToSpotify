@@ -1,8 +1,13 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, render_template
 from app.youtube import get_youtube_playlist
 from app.spotify import create_spotify_playlist, add_tracks_to_playlist
 
+
 bp = Blueprint('main', __name__)
+
+@bp.route('/')
+def index():
+    return render_template('Landing.html')
 
 @bp.route('/convert', methods=['POST'])
 def convert_playlist():
