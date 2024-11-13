@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify to YouTube Playlist Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Spotify to YouTube Playlist Converter</h1>
+        <!-- Step 1 -->
+        <div id="step1" class="step">
+            <h2>Step 1: Select Source</h2>
+            <button id="youtube">YouTube</button>
+            <button id="spotify" disabled>Spotify</button>
+            <button id="deezer" disabled>Deezer</button>
+            <button id="soundcloud" disabled>SoundCloud</button>
+        </div>
+
+        <!-- Step 2 -->
+        <div id="step2" class="step">
+            <h2>Step 2: Enter URL or Load from YouTube Account</h2>
+            <input type="text" id="playlist_url" placeholder="Enter YouTube Playlist/Link">
+            <button id="load_from_youtube">Load from YouTube Account</button>
+        </div>
+
+        <!-- Step 3 -->
+        <div id="step3" class="step">
+            <h2>Step 3: Select Playlist/Song to Move</h2>
+            <div id="playlist_select">
+                <!-- Dynamically loaded playlists -->
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div id="step4" class="step">
+            <h2>Step 4: Select Destination</h2>
+            <button id="spotify_dest">Spotify</button>
+            <button id="deezer_dest" disabled>Deezer</button>
+            <button id="soundcloud_dest" disabled>SoundCloud</button>
+        </div>
+
+        <!-- Step 5 -->
+        <div id="step5" class="step">
+            <h2>Step 5: Summary</h2>
+            <p id="summary">Summary of selected playlist and tracks.</p>
+            <button id="start_transfer">Start Transfer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
